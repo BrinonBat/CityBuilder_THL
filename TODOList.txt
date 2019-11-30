@@ -1,0 +1,11 @@
+étapes sans prérequis:
+	toutes les analyse lexicale (.ll)
+	conception de la grammaire
+étapes à suivre:
+	// suite aux étapes sans prérequis 
+	2) mise en place sur le Constructeur
+	3) mise en place sur les maisons 
+	4) mise en place sur les routes
+
+étapes indépendantes:
+	5) les fonctions externes
