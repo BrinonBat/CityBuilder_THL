@@ -327,17 +327,17 @@ namespace yy {
     {
       enum yytokentype
       {
-        NL = 258,
-        END = 259,
-        NUMBER = 260,
-        build = 261,
-        maison = 262,
-        route = 263,
-        arrow = 264,
-        debcomlong = 265,
-        fincomlong = 266,
-        comcourt = 267,
-        com = 268,
+        debcomlong = 258,
+        fincomlong = 259,
+        comcourt = 260,
+        com = 261,
+        NL = 262,
+        END = 263,
+        NUMBER = 264,
+        build = 265,
+        maison = 266,
+        route = 267,
+        arrow = 268,
         NEG = 269
       };
     };
@@ -449,6 +449,22 @@ namespace yy {
     // Symbol constructors declarations.
     static inline
     symbol_type
+    make_debcomlong (const location_type& l);
+
+    static inline
+    symbol_type
+    make_fincomlong (const location_type& l);
+
+    static inline
+    symbol_type
+    make_comcourt (const location_type& l);
+
+    static inline
+    symbol_type
+    make_com (const std::string& v, const location_type& l);
+
+    static inline
+    symbol_type
     make_NL (const location_type& l);
 
     static inline
@@ -474,22 +490,6 @@ namespace yy {
     static inline
     symbol_type
     make_arrow (const location_type& l);
-
-    static inline
-    symbol_type
-    make_debcomlong (const location_type& l);
-
-    static inline
-    symbol_type
-    make_fincomlong (const location_type& l);
-
-    static inline
-    symbol_type
-    make_comcourt (const location_type& l);
-
-    static inline
-    symbol_type
-    make_com (const std::string& v, const location_type& l);
 
     static inline
     symbol_type

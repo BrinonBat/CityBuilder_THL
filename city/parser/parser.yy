@@ -25,7 +25,7 @@
 %code{
     #include <iostream>
     #include <string>
-    
+
     #include "scanner.hh"
     #include "driver.hh"
 
@@ -33,6 +33,9 @@
     #define yylex scanner.yylex
 }
 
+%token                  debcomlong fincomlong
+%token                  comcourt
+%token<std::string>     com
 %token                  NL
 %token                  END
 %token <int>            NUMBER
@@ -40,9 +43,7 @@
 %token                  maison
 %token                  route
 %token                  arrow
-%token                  debcomlong fincomlong
-%token                  comcourt
-%token<std::string>     com
+
 
 %type <int>             operation
 %type<std::string>      traitement traitements commentairect commentairelg

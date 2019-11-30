@@ -25,13 +25,13 @@ using token = yy::Parser::token;
 %}
 fin return token::END;
 
+"%/" return token::debcomlong;
+"/%" return token::fincomlong;
+"%%" return token::comcourt;
 "Construire" return token::build;
 "Maison" return token::maison;
 "Route" return token::route;
 "->" return token::arrow;
-"%/" return token::debcomlong;
-"/%" return token::fincomlong;
-"%%" return token::comcourt;
 
 "+" return '+';
 "*" return '*';

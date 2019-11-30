@@ -355,9 +355,9 @@ static yyconst flex_int16_t yy_accept[51] =
     {   0,
         0,    0,   24,   23,   21,   23,   13,   14,   10,    9,
        18,   11,   12,   19,   15,   20,   20,   20,   20,   20,
-       16,   17,   22,    8,    6,    5,    7,   19,   20,   20,
+       16,   17,   22,    4,    2,    8,    3,   19,   20,   20,
        20,   20,   20,   20,   20,   20,    1,   20,   20,   20,
-       20,   20,    4,   20,    3,   20,   20,   20,    2,    0
+       20,   20,    7,   20,    6,   20,   20,   20,    5,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -674,37 +674,37 @@ return token::END;
 case 2:
 YY_RULE_SETUP
 #line 28 "parser/scanner.ll"
-return token::build;
+return token::debcomlong;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 29 "parser/scanner.ll"
-return token::maison;
+return token::fincomlong;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 30 "parser/scanner.ll"
-return token::route;
+return token::comcourt;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 31 "parser/scanner.ll"
-return token::arrow;
+return token::build;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 32 "parser/scanner.ll"
-return token::debcomlong;
+return token::maison;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 33 "parser/scanner.ll"
-return token::fincomlong;
+return token::route;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 34 "parser/scanner.ll"
-return token::comcourt;
+return token::arrow;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
