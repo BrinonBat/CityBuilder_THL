@@ -8,4 +8,4 @@
 	4) mise en place sur les routes
 
 étapes indépendantes:
-	5) les fonctions externes
+	les fonctions externes

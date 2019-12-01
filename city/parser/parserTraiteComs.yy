@@ -33,9 +33,12 @@
     #define yylex scanner.yylex
 }
 
+%token                  debcomlong fincomlong
+%token                  comcourt
+%token<std::string>     com
 %token                  NL
 %token                  END
-%token <unsigned int>            NUMBER
+%token <int>            NUMBER
 %token                  build
 %token                  maison
 %token                  route
@@ -43,7 +46,7 @@
 
 
 %type <int>             operation
-%type<std::string>      traitement traitements
+%type<std::string>      traitement traitements commentairect commentairelg
 %left '-' '+'
 %left '*' '/'
 %precedence  NEG
@@ -56,7 +59,7 @@ programme:
     }
 
 instruction:
-    operation{
+    operation  {
         std::cout << "#-> " << $1 << std::endl;
     }
     | build '{' NL traitements '}'{
@@ -76,7 +79,8 @@ traitements:
     traitement NL traitements{
 
     }
-    |traitement NL {
+    |
+    traitement NL {
 
     }
 
@@ -92,6 +96,41 @@ traitement:
         | route coordonnee arrow coordonnee  {
             std::cout<<"Route "<<"->"<<std::endl;
         }
+         | debcomlong NL commentairelg fincomlong  {
+             std::cout<<"Commentaire long "<<$3<<std::endl;
+         }
+         | comcourt commentairect  {
+                 std::cout<<"Commentaire ligne "<<$2<<std::endl;
+         }
+
+commentairect:
+         com {
+             $$=$1;
+         }
+         | com commentairect {
+             $$=$1+$2;
+         }
+         | '(' {
+               $$="(";
+         }
+         |',' {
+            $$=",";
+         }
+         |')' {
+            $$=")";
+         }
+         | NUMBER {
+            $$=std::to_string($1);
+         }
+
+
+commentairelg:
+         commentairect NL commentairelg {
+             $$=$1+$3;
+         }
+         | commentairect NL{
+             $$=$1;
+         }
 
 coordonnee:
         '(' operation ',' operation ',' operation ')' {

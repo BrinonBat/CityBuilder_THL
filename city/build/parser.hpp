@@ -295,16 +295,15 @@ namespace yy {
     /// An auxiliary type to compute the largest semantic type.
     union union_type
     {
-      // NUMBER
       // operation
       char dummy1[sizeof(int)];
 
-      // com
       // traitements
       // traitement
-      // commentairect
-      // commentairelg
       char dummy2[sizeof(std::string)];
+
+      // NUMBER
+      char dummy3[sizeof(unsigned int)];
 };
 
     /// Symbol semantic values.
@@ -334,11 +333,7 @@ namespace yy {
         maison = 262,
         route = 263,
         arrow = 264,
-        debcomlong = 265,
-        fincomlong = 266,
-        comcourt = 267,
-        com = 268,
-        NEG = 269
+        NEG = 265
       };
     };
 
@@ -379,6 +374,8 @@ namespace yy {
   basic_symbol (typename Base::kind_type t, const int v, const location_type& l);
 
   basic_symbol (typename Base::kind_type t, const std::string v, const location_type& l);
+
+  basic_symbol (typename Base::kind_type t, const unsigned int v, const location_type& l);
 
 
       /// Constructor for symbols with semantic value.
@@ -457,7 +454,7 @@ namespace yy {
 
     static inline
     symbol_type
-    make_NUMBER (const int& v, const location_type& l);
+    make_NUMBER (const unsigned int& v, const location_type& l);
 
     static inline
     symbol_type
@@ -474,22 +471,6 @@ namespace yy {
     static inline
     symbol_type
     make_arrow (const location_type& l);
-
-    static inline
-    symbol_type
-    make_debcomlong (const location_type& l);
-
-    static inline
-    symbol_type
-    make_fincomlong (const location_type& l);
-
-    static inline
-    symbol_type
-    make_comcourt (const location_type& l);
-
-    static inline
-    symbol_type
-    make_com (const std::string& v, const location_type& l);
 
     static inline
     symbol_type
@@ -580,7 +561,7 @@ namespace yy {
   // number is the opposite.  If YYTABLE_NINF, syntax error.
   static const unsigned char yytable_[];
 
-  static const signed char yycheck_[];
+  static const unsigned char yycheck_[];
 
   // YYSTOS[STATE-NUM] -- The (internal number of the) accessing
   // symbol of state STATE-NUM.
@@ -697,12 +678,12 @@ namespace yy {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 74,     ///< Last index in yytable_.
-      yynnts_ = 9,  ///< Number of nonterminal symbols.
+      yylast_ = 60,     ///< Last index in yytable_.
+      yynnts_ = 7,  ///< Number of nonterminal symbols.
       yyfinal_ = 12, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
-      yyntokens_ = 24  ///< Number of tokens.
+      yyntokens_ = 20  ///< Number of tokens.
     };
 
 
@@ -714,7 +695,7 @@ namespace yy {
 
 
 } // yy
-#line 718 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 699 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
 
 
 

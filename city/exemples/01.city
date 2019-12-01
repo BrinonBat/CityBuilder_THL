@@ -3,7 +3,7 @@ Construire (5){
     Maison
     %/
         Construit une maison à des coordonnées
-        aléatoires dans la limite de la taille 
+        aléatoires dans la limite de la taille
         de la ville
     /%
     Maison (0,0,0)
