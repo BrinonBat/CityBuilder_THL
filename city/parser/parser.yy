@@ -40,6 +40,9 @@
 %token                  maison
 %token                  route
 %token                  arrow
+%token                  debcomlong fincomlong
+%token                  comcourt
+%token<std::string>     com
 
 
 %type <int>             operation
@@ -92,7 +95,50 @@ traitement:
         | route coordonnee arrow coordonnee  {
             std::cout<<"Route "<<"->"<<std::endl;
         }
+        | debcomlong NL commentairelg fincomlong  {
+             std::cout<<"Commentaire long "<<std::endl;
+        }
+        | comcourt commentairect  {
+                std::cout<<"Commentaire ligne "<<std::endl;
+        }
 
+commentairect:
+         com {
+         }
+         | com commentairect {
+         }
+         | '(' commentairect {
+         }
+         |',' commentairect{
+         }
+         |')' commentairect{
+         }
+         | NUMBER commentairect{
+         }
+         | '('  {
+         }
+         |',' {
+         }
+         |')' {
+         }
+         | NUMBER {
+         }
+         |'\'' commentairect{}
+         | '\''
+         | '-' {}
+         | '-' commentairect{}
+         | build{}
+         |build commentairect{}
+         |END commentairect{}
+         |END {}
+
+commentairelg:
+         commentairect NL commentairelg {
+             
+         }
+         | commentairect NL{
+             
+         }
 coordonnee:
         '(' operation ',' operation ',' operation ')' {
             std::cout<<" coordonnee ";
