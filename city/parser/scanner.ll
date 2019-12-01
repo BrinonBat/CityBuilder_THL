@@ -44,6 +44,7 @@ fin return token::END;
 "{" return '{';
 "}" return '}';
 "," return ',';
+"\'" return '\'';
 
 [0-9]+      {
     yylval->build<int>(std::atoi(YYText()));
