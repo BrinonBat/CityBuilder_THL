@@ -25,7 +25,7 @@ using token = yy::Parser::token;
 %}
 fin return token::END;
 
-"%%"[.]*\$ ; //suppression des commentaire de ligne
+"%%"[.]*$ ; //suppression des commentaire de ligne
 
 "/%"[.]*"%/" ; //suppression des blocs de commentaires
 
