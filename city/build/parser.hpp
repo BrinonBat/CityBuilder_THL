@@ -31,14 +31,14 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp
+ ** \file /home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp
  ** Define the yy::parser class.
  */
 
 // C++ LALR(1) parser skeleton written by Akim Demaille.
 
-#ifndef YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
 // //                    "%code requires" blocks.
 #line 11 "parser/parser.yy" // lalr1.cc:377
 
@@ -51,7 +51,7 @@
     class Scanner;
     class Driver;
 
-#line 55 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 55 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -128,7 +128,7 @@
 
 
 namespace yy {
-#line 132 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 132 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
 
 
 
@@ -298,6 +298,7 @@ namespace yy {
       // operation
       char dummy1[sizeof(int)];
 
+      // com
       // traitements
       // traitement
       char dummy2[sizeof(std::string)];
@@ -333,7 +334,8 @@ namespace yy {
         maison = 262,
         route = 263,
         arrow = 264,
-        NEG = 265
+        com = 265,
+        NEG = 266
       };
     };
 
@@ -471,6 +473,10 @@ namespace yy {
     static inline
     symbol_type
     make_arrow (const location_type& l);
+
+    static inline
+    symbol_type
+    make_com (const std::string& v, const location_type& l);
 
     static inline
     symbol_type
@@ -683,7 +689,7 @@ namespace yy {
       yyfinal_ = 12, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
-      yyntokens_ = 20  ///< Number of tokens.
+      yyntokens_ = 21  ///< Number of tokens.
     };
 
 
@@ -695,9 +701,9 @@ namespace yy {
 
 
 } // yy
-#line 699 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 705 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
 
 
 
 
-#endif // !YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+#endif // !YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED

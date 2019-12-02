@@ -1,6 +1,7 @@
 Terminaux inutilisés dans la grammaire
 
    END
+   com
 
 
 Grammaire
@@ -51,24 +52,25 @@ build (261) 3 4
 maison (262) 7 8
 route (263) 9
 arrow (264) 9
-NEG (265)
+com (265)
+NEG (266)
 
 
 Non-terminaux, suivis des règles où ils apparaissent
 
-$accept (20)
+$accept (21)
     à gauche: 0
-programme (21)
+programme (22)
     à gauche: 1, à droite: 0
-instruction (22)
+instruction (23)
     à gauche: 2 3 4, à droite: 1
-traitements (23)
+traitements (24)
     à gauche: 5 6, à droite: 3 4 5
-traitement (24)
+traitement (25)
     à gauche: 7 8 9, à droite: 5 6
-coordonnee (25)
+coordonnee (26)
     à gauche: 10, à droite: 8 9
-operation (26)
+operation (27)
     à gauche: 11 12 13 14 15 16 17, à droite: 2 10 12 13 14 15 16
     17
 

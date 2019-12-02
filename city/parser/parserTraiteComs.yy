@@ -33,20 +33,20 @@
     #define yylex scanner.yylex
 }
 
-%token                  debcomlong fincomlong
-%token                  comcourt
-%token<std::string>     com
 %token                  NL
 %token                  END
-%token <int>            NUMBER
+%token <unsigned int>            NUMBER
 %token                  build
 %token                  maison
 %token                  route
 %token                  arrow
+%token                  debcomlong fincomlong
+%token                  comcourt
+%token<std::string>     com
 
 
 %type <int>             operation
-%type<std::string>      traitement traitements commentairect commentairelg
+%type<std::string>      traitement traitements
 %left '-' '+'
 %left '*' '/'
 %precedence  NEG
@@ -59,7 +59,7 @@ programme:
     }
 
 instruction:
-    operation  {
+    operation{
         std::cout << "#-> " << $1 << std::endl;
     }
     | build '{' NL traitements '}'{
@@ -79,8 +79,7 @@ traitements:
     traitement NL traitements{
 
     }
-    |
-    traitement NL {
+    |traitement NL {
 
     }
 
@@ -96,42 +95,50 @@ traitement:
         | route coordonnee arrow coordonnee  {
             std::cout<<"Route "<<"->"<<std::endl;
         }
-         | debcomlong NL commentairelg fincomlong  {
-             std::cout<<"Commentaire long "<<$3<<std::endl;
-         }
-         | comcourt commentairect  {
-                 std::cout<<"Commentaire ligne "<<$2<<std::endl;
-         }
+        | debcomlong NL commentairelg fincomlong  {
+             std::cout<<"Commentaire long "<<std::endl;
+        }
+        | comcourt commentairect  {
+                std::cout<<"Commentaire ligne "<<std::endl;
+        }
 
 commentairect:
          com {
-             $$=$1;
          }
          | com commentairect {
-             $$=$1+$2;
          }
-         | '(' {
-               $$="(";
+         | '(' commentairect {
+         }
+         |',' commentairect{
+         }
+         |')' commentairect{
+         }
+         | NUMBER commentairect{
+         }
+         | '('  {
          }
          |',' {
-            $$=",";
          }
          |')' {
-            $$=")";
          }
          | NUMBER {
-            $$=std::to_string($1);
          }
-
+         |'\'' commentairect{}
+         | '\''
+         | '-' {}
+         | '-' commentairect{}
+         | build{}
+         |build commentairect{}
+         |END commentairect{}
+         |END {}
 
 commentairelg:
          commentairect NL commentairelg {
-             $$=$1+$3;
+
          }
          | commentairect NL{
-             $$=$1;
-         }
 
+         }
 coordonnee:
         '(' operation ',' operation ',' operation ')' {
             std::cout<<" coordonnee ";

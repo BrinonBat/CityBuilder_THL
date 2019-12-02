@@ -33,7 +33,7 @@
 
 // First part of user declarations.
 
-#line 37 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:404
+#line 37 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:404
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -47,7 +47,7 @@
 
 // User implementation prologue.
 
-#line 51 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:412
+#line 51 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:412
 // Unqualified %code blocks.
 #line 25 "parser/parser.yy" // lalr1.cc:413
 
@@ -60,7 +60,7 @@
     #undef  yylex
     #define yylex scanner.yylex
 
-#line 64 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:413
+#line 64 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:413
 
 
 #ifndef YY_
@@ -146,7 +146,7 @@
 
 
 namespace yy {
-#line 150 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:479
+#line 150 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:479
 
   /// Build a parser object.
    Parser :: Parser  (Scanner &scanner_yyarg, Driver &driver_yyarg)
@@ -189,12 +189,13 @@ namespace yy {
   {
       switch (other.type_get ())
     {
-      case 26: // operation
+      case 27: // operation
         value.copy< int > (other.value);
         break;
 
-      case 23: // traitements
-      case 24: // traitement
+      case 10: // com
+      case 24: // traitements
+      case 25: // traitement
         value.copy< std::string > (other.value);
         break;
 
@@ -219,12 +220,13 @@ namespace yy {
     (void) v;
       switch (this->type_get ())
     {
-      case 26: // operation
+      case 27: // operation
         value.copy< int > (v);
         break;
 
-      case 23: // traitements
-      case 24: // traitement
+      case 10: // com
+      case 24: // traitements
+      case 25: // traitement
         value.copy< std::string > (v);
         break;
 
@@ -294,12 +296,13 @@ namespace yy {
     // Type destructor.
     switch (yytype)
     {
-      case 26: // operation
+      case 27: // operation
         value.template destroy< int > ();
         break;
 
-      case 23: // traitements
-      case 24: // traitement
+      case 10: // com
+      case 24: // traitements
+      case 25: // traitement
         value.template destroy< std::string > ();
         break;
 
@@ -330,12 +333,13 @@ namespace yy {
     super_type::move(s);
       switch (this->type_get ())
     {
-      case 26: // operation
+      case 27: // operation
         value.move< int > (s.value);
         break;
 
-      case 23: // traitements
-      case 24: // traitement
+      case 10: // com
+      case 24: // traitements
+      case 25: // traitement
         value.move< std::string > (s.value);
         break;
 
@@ -431,6 +435,12 @@ namespace yy {
   }
 
    Parser ::symbol_type
+   Parser ::make_com (const std::string& v, const location_type& l)
+  {
+    return symbol_type (token::com, v, l);
+  }
+
+   Parser ::symbol_type
    Parser ::make_NEG (const location_type& l)
   {
     return symbol_type (token::NEG, l);
@@ -490,12 +500,13 @@ namespace yy {
   {
       switch (that.type_get ())
     {
-      case 26: // operation
+      case 27: // operation
         value.move< int > (that.value);
         break;
 
-      case 23: // traitements
-      case 24: // traitement
+      case 10: // com
+      case 24: // traitements
+      case 25: // traitement
         value.move< std::string > (that.value);
         break;
 
@@ -518,12 +529,13 @@ namespace yy {
     state = that.state;
       switch (that.type_get ())
     {
-      case 26: // operation
+      case 27: // operation
         value.copy< int > (that.value);
         break;
 
-      case 23: // traitements
-      case 24: // traitement
+      case 10: // com
+      case 24: // traitements
+      case 25: // traitement
         value.copy< std::string > (that.value);
         break;
 
@@ -758,12 +770,13 @@ namespace yy {
          when using variants.  */
         switch (yyr1_[yyn])
     {
-      case 26: // operation
+      case 27: // operation
         yylhs.value.build< int > ();
         break;
 
-      case 23: // traitements
-      case 24: // traitement
+      case 10: // com
+      case 24: // traitements
+      case 25: // traitement
         yylhs.value.build< std::string > ();
         break;
 
@@ -789,33 +802,34 @@ namespace yy {
           switch (yyn)
             {
   case 2:
-#line 54 "parser/parser.yy" // lalr1.cc:859
+#line 55 "parser/parser.yy" // lalr1.cc:859
     {
+        YYACCEPT;
     }
-#line 796 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 810 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 3:
-#line 58 "parser/parser.yy" // lalr1.cc:859
+#line 60 "parser/parser.yy" // lalr1.cc:859
     {
         std::cout << "#-> " << yystack_[0].value.as< int > () << std::endl;
     }
-#line 804 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 818 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 4:
-#line 61 "parser/parser.yy" // lalr1.cc:859
+#line 63 "parser/parser.yy" // lalr1.cc:859
     {
          // creation graphe taille 5
         std::cout<<"Construire {"<<std::endl;
         std::cout<<yystack_[1].value.as< std::string > ()<<std::endl;
         std::cout<<"}"<<std::endl;
     }
-#line 815 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 829 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 5:
-#line 67 "parser/parser.yy" // lalr1.cc:859
+#line 69 "parser/parser.yy" // lalr1.cc:859
     {
         // creation graphe de taille resultat operation
         // si graphe existe deja change juste la taille graphe
@@ -823,23 +837,21 @@ namespace yy {
         std::cout<<yystack_[1].value.as< std::string > ()<<std::endl;
         std::cout<<"}"<<std::endl;
     }
-#line 827 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 841 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 6:
-#line 75 "parser/parser.yy" // lalr1.cc:859
+#line 77 "parser/parser.yy" // lalr1.cc:859
     {
-
     }
-#line 835 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 848 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 7:
-#line 78 "parser/parser.yy" // lalr1.cc:859
+#line 79 "parser/parser.yy" // lalr1.cc:859
     {
-
     }
-#line 843 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 855 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 8:
@@ -848,7 +860,7 @@ namespace yy {
             //construire maison à un emplacement aléatoire
                 std::cout<<"Maison ok"<<std::endl;
         }
-#line 852 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 864 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 9:
@@ -857,23 +869,23 @@ namespace yy {
             // construire maison selon coordonées
                 std::cout<<"Maison cok"<<std::endl;
         }
-#line 861 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 873 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 10:
 #line 91 "parser/parser.yy" // lalr1.cc:859
     {
             std::cout<<"Route "<<"->"<<std::endl;
-        }
-#line 869 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+		}
+#line 881 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 11:
 #line 96 "parser/parser.yy" // lalr1.cc:859
     {
             std::cout<<" coordonnee ";
-                }
-#line 877 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+        }
+#line 889 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 12:
@@ -881,7 +893,7 @@ namespace yy {
     {
         yylhs.value.as< int > () = yystack_[0].value.as< unsigned int > ();
     }
-#line 885 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 897 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 13:
@@ -889,7 +901,7 @@ namespace yy {
     {
         yylhs.value.as< int > () = yystack_[1].value.as< int > ();
     }
-#line 893 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 905 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 14:
@@ -897,7 +909,7 @@ namespace yy {
     {
         yylhs.value.as< int > () = yystack_[2].value.as< int > () + yystack_[0].value.as< int > ();
     }
-#line 901 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 913 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 15:
@@ -905,7 +917,7 @@ namespace yy {
     {
         yylhs.value.as< int > () = yystack_[2].value.as< int > () - yystack_[0].value.as< int > ();
     }
-#line 909 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 921 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 16:
@@ -913,7 +925,7 @@ namespace yy {
     {
         yylhs.value.as< int > () = yystack_[2].value.as< int > () * yystack_[0].value.as< int > ();
     }
-#line 917 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 929 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 17:
@@ -921,7 +933,7 @@ namespace yy {
     {
         yylhs.value.as< int > () = yystack_[2].value.as< int > () / yystack_[0].value.as< int > ();
     }
-#line 925 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 937 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
   case 18:
@@ -929,11 +941,11 @@ namespace yy {
     {
         yylhs.value.as< int > () = - yystack_[0].value.as< int > ();
     }
-#line 933 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 945 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
     break;
 
 
-#line 937 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
+#line 949 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:859
             default:
               break;
             }
@@ -1106,11 +1118,11 @@ namespace yy {
   const signed char
    Parser ::yypact_[] =
   {
-      -2,   -32,    34,     4,     4,     6,   -32,     7,    31,    47,
-     -32,    17,   -32,     4,     4,     4,     4,    25,    36,   -32,
-      35,    35,   -32,   -32,    38,    38,    37,    53,    42,     4,
-     -32,    49,   -32,    25,    56,    12,    38,   -32,    25,     4,
-     -32,    44,    27,   -32,     4,    32,   -32
+      -2,   -32,     2,     3,     3,     5,   -32,    40,    12,    14,
+     -32,    16,   -32,     3,     3,     3,     3,    25,    15,   -32,
+      34,    34,   -32,   -32,    37,    37,    32,    53,    41,     3,
+     -32,    49,   -32,    25,    56,    11,    37,   -32,    25,     3,
+     -32,    43,    26,   -32,     3,    31,   -32
   };
 
   const unsigned char
@@ -1126,7 +1138,7 @@ namespace yy {
   const signed char
    Parser ::yypgoto_[] =
   {
-     -32,   -32,   -32,   -31,   -32,   -20,    -3
+     -32,   -32,   -32,   -31,   -32,   -19,    -3
   };
 
   const signed char
@@ -1138,42 +1150,42 @@ namespace yy {
   const unsigned char
    Parser ::yytable_[] =
   {
-      10,    11,    37,     1,     2,    31,    12,    41,     3,     1,
-      20,    21,    22,    23,     3,     4,    40,    13,    14,    15,
-      16,     4,    13,    14,    15,    16,    35,    13,    14,    15,
-      16,    39,    24,    25,    17,    19,    42,    13,    14,    15,
-      16,    45,    13,    14,    15,    16,    44,    15,    16,     8,
-      46,     9,    18,    32,    28,    29,    33,    34,    36,    38,
+      10,    11,    37,     1,     2,    12,    31,    41,     1,     3,
+      20,    21,    22,    23,     3,    17,     4,    40,     8,    18,
+       9,     4,    13,    14,    15,    16,    35,    13,    14,    15,
+      16,    39,    24,    25,    28,    19,    42,    13,    14,    15,
+      16,    45,    13,    14,    15,    16,    44,    15,    16,    32,
+      46,    13,    14,    15,    16,    29,    33,    34,    36,    38,
       43
   };
 
   const unsigned char
    Parser ::yycheck_[] =
   {
-       3,     4,    33,     5,     6,    25,     0,    38,    10,     5,
-      13,    14,    15,    16,    10,    17,    36,    10,    11,    12,
-      13,    17,    10,    11,    12,    13,    29,    10,    11,    12,
-      13,    19,     7,     8,     3,    18,    39,    10,    11,    12,
-      13,    44,    10,    11,    12,    13,    19,    12,    13,    15,
-      18,    17,     5,    16,    18,    17,     3,    15,     9,     3,
-      16
+       3,     4,    33,     5,     6,     0,    25,    38,     5,    11,
+      13,    14,    15,    16,    11,     3,    18,    36,    16,     5,
+      18,    18,    11,    12,    13,    14,    29,    11,    12,    13,
+      14,    20,     7,     8,    19,    19,    39,    11,    12,    13,
+      14,    44,    11,    12,    13,    14,    20,    13,    14,    17,
+      19,    11,    12,    13,    14,    18,     3,    16,     9,     3,
+      17
   };
 
   const unsigned char
    Parser ::yystos_[] =
   {
-       0,     5,     6,    10,    17,    21,    22,    26,    15,    17,
-      26,    26,     0,    10,    11,    12,    13,     3,     5,    18,
-      26,    26,    26,    26,     7,     8,    23,    24,    18,    17,
-      25,    25,    16,     3,    15,    26,     9,    23,     3,    19,
-      25,    23,    26,    16,    19,    26,    18
+       0,     5,     6,    11,    18,    22,    23,    27,    16,    18,
+      27,    27,     0,    11,    12,    13,    14,     3,     5,    19,
+      27,    27,    27,    27,     7,     8,    24,    25,    19,    18,
+      26,    26,    17,     3,    16,    27,     9,    24,     3,    20,
+      26,    24,    27,    17,    20,    27,    19
   };
 
   const unsigned char
    Parser ::yyr1_[] =
   {
-       0,    20,    21,    22,    22,    22,    23,    23,    24,    24,
-      24,    25,    26,    26,    26,    26,    26,    26,    26
+       0,    21,    22,    23,    23,    23,    24,    24,    25,    25,
+      25,    26,    27,    27,    27,    27,    27,    27,    27
   };
 
   const unsigned char
@@ -1191,16 +1203,16 @@ namespace yy {
   const  Parser ::yytname_[] =
   {
   "$end", "error", "$undefined", "NL", "END", "NUMBER", "build", "maison",
-  "route", "arrow", "'-'", "'+'", "'*'", "'/'", "NEG", "'{'", "'}'", "'('",
-  "')'", "','", "$accept", "programme", "instruction", "traitements",
-  "traitement", "coordonnee", "operation", YY_NULLPTR
+  "route", "arrow", "com", "'-'", "'+'", "'*'", "'/'", "NEG", "'{'", "'}'",
+  "'('", "')'", "','", "$accept", "programme", "instruction",
+  "traitements", "traitement", "coordonnee", "operation", YY_NULLPTR
   };
 
 
   const unsigned char
    Parser ::yyrline_[] =
   {
-       0,    54,    54,    58,    61,    67,    75,    78,    83,    87,
+       0,    55,    55,    60,    63,    69,    77,    79,    83,    87,
       91,    96,   102,   105,   108,   111,   114,   117,   120
   };
 
@@ -1246,7 +1258,7 @@ namespace yy {
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-      17,    18,    12,    11,    19,    10,     2,    13,     2,     2,
+      18,    19,    13,    12,    20,    11,     2,    14,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -1254,7 +1266,7 @@ namespace yy {
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,    15,     2,    16,     2,     2,     2,     2,
+       2,     2,     2,    16,     2,    17,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -1268,9 +1280,9 @@ namespace yy {
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
-       5,     6,     7,     8,     9,    14
+       5,     6,     7,     8,     9,    10,    15
     };
-    const unsigned int user_token_number_max_ = 265;
+    const unsigned int user_token_number_max_ = 266;
     const token_number_type undef_token_ = 2;
 
     if (static_cast<int>(t) <= yyeof_)
@@ -1283,7 +1295,7 @@ namespace yy {
 
 
 } // yy
-#line 1287 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:1167
+#line 1299 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp" // lalr1.cc:1167
 #line 124 "parser/parser.yy" // lalr1.cc:1168
 
 
