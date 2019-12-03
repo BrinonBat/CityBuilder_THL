@@ -13,7 +13,7 @@ find_package(FLEX)
 
 
 include_directories(parser expressions ${CMAKE_CURRENT_BINARY_DIR})
-file(GLOB EXPRESSION_HEADERS 
+file(GLOB EXPRESSION_HEADERS
     expressions/contexte.hh
     expressions/expression.hh
     expressions/expressionBinaire.hh
@@ -22,7 +22,7 @@ file(GLOB EXPRESSION_HEADERS
     expressions/variable.hh
     )
 
-add_library(libexpressions 
+add_library(libexpressions
     expressions/contexte.cc
     expressions/expressionBinaire.cc
     expressions/expressionUnaire.cc
@@ -31,8 +31,8 @@ add_library(libexpressions
     ${EXPRESSION_HEADERS}
     )
 
-BISON_TARGET(parser parser/parser.yy ${CMAKE_CURRENT_BINARY_DIR}/parser.cpp VERBOSE ${CMAKE_CURRENT_BINARY_DIR}/automate.txt)
-FLEX_TARGET(scanner parser/scanner.ll  ${CMAKE_CURRENT_BINARY_DIR}/scanner.cpp)
+BISON_TARGET(parser parser/parser_backup.yy ${CMAKE_CURRENT_BINARY_DIR}/parser.cpp VERBOSE ${CMAKE_CURRENT_BINARY_DIR}/automate.txt)
+FLEX_TARGET(scanner parser/scanner_backup.ll  ${CMAKE_CURRENT_BINARY_DIR}/scanner.cpp)
 ADD_FLEX_BISON_DEPENDENCY(scanner parser)
 add_executable(${PROJECT_NAME}
     parser/main.cc

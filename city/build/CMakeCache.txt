@@ -186,6 +186,12 @@ city_builder_SOURCE_DIR:STATIC=/home/baptiste/Documents/projects/CityBuilder_THL
 //Dependencies for target
 libexpressions_LIB_DEPENDS:STATIC=
 
+//Value Computed by CMake
+test_BINARY_DIR:STATIC=/home/baptiste/Documents/projects/CityBuilder_THL/city/build
+
+//Value Computed by CMake
+test_SOURCE_DIR:STATIC=/home/baptiste/Documents/projects/CityBuilder_THL/city
+
 
 ########################
 # INTERNAL cache entries

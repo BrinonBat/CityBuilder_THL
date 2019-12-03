@@ -57,9 +57,9 @@ include CMakeFiles/city_builder.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/city_builder.dir/flags.make
 
-parser.cpp: ../parser/parser.yy
+parser.cpp: ../parser/parser_backup.yy
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/baptiste/Documents/projects/CityBuilder_THL/city/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "[BISON][parser] Building parser with bison 3.0.4"
-	cd /home/baptiste/Documents/projects/CityBuilder_THL/city && /usr/bin/bison --verbose -d -o /home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp parser/parser.yy
+	cd /home/baptiste/Documents/projects/CityBuilder_THL/city && /usr/bin/bison --verbose -d -o /home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp parser/parser_backup.yy
 
 parser.hpp: parser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate parser.hpp
@@ -67,9 +67,9 @@ parser.hpp: parser.cpp
 parser.output: parser.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate parser.output
 
-scanner.cpp: ../parser/scanner.ll
+scanner.cpp: ../parser/scanner_backup.ll
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/baptiste/Documents/projects/CityBuilder_THL/city/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "[FLEX][scanner] Building scanner with flex 2.6.0"
-	cd /home/baptiste/Documents/projects/CityBuilder_THL/city && /usr/bin/flex -o/home/baptiste/Documents/projects/CityBuilder_THL/city/build/scanner.cpp parser/scanner.ll
+	cd /home/baptiste/Documents/projects/CityBuilder_THL/city && /usr/bin/flex -o/home/baptiste/Documents/projects/CityBuilder_THL/city/build/scanner.cpp parser/scanner_backup.ll
 
 CMakeFiles/city_builder.dir/parser/main.cc.o: CMakeFiles/city_builder.dir/flags.make
 CMakeFiles/city_builder.dir/parser/main.cc.o: ../parser/main.cc
