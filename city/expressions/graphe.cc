@@ -12,8 +12,8 @@ Graphe::~Graphe(){
 
 void Graphe::initMatrice(int nbS){
   rayon = nbS;
-  for (int i=0; i<(rayon*2)+1; ++i){
-    for (int j=0; j<(rayon*2)+1; ++j){
+  for (int i=0; i<rayon; ++i){
+    for (int j=0; j<rayon; ++j){
       matrice[i][j]=0;
     }
   }
@@ -27,9 +27,9 @@ void Graphe::ajoutArc(int origine,int destination, int c){
 
 void Graphe::affichageMatrice(){
   std::vector<int> largeurColonne;
-  for (int i=0; i<(rayon*2)+1; ++i){    
+  for (int i=0; i<rayon; ++i){    
     int max=0;
-    for (int j=0; j<(rayon*2)+1; ++j){
+    for (int j=0; j<rayon; ++j){
       std::ostringstream tmp;
       tmp << matrice[j][i];
       if (tmp.tellp() > max) {max=tmp.tellp();}   
@@ -37,12 +37,12 @@ void Graphe::affichageMatrice(){
     largeurColonne.push_back(max);
   }
   std::cout << "    ";
-  for (int i=0; i<(rayon*2)+1; ++i)
+  for (int i=0; i<rayon; ++i)
     printf("%*d  ",largeurColonne[i],i-rayon);
   std::cout << std::endl; 
-  for (int i=0; i<(rayon*2)+1; ++i){
+  for (int i=0; i<rayon; ++i){
     printf("%3d|",i-rayon);
-    for (int j=0; j<(rayon*2)+1; ++j){
+    for (int j=0; j<rayon; ++j){
       if(j-rayon>=0 && (j-rayon)<10){
       printf("%*.*d  ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
     }else if((j-rayon)<-9){
@@ -59,7 +59,7 @@ void Graphe::affichageMatrice(){
 void Graphe::explorer(int s){
   parcourus[s]=true;
   std::cout << "S" << s+1 << " ";
-  for (int i=0;i<(rayon*2)+1;++i) {
+  for (int i=0;i<rayon;++i) {
     if (!parcourus[i] and (matrice[s][i]!=0))
       explorer(i);
   }   

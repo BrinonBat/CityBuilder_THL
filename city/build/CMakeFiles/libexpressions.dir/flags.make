@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wpedantic -std=c++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pdelepine/projet/citytest/city/build -I/home/pdelepine/projet/citytest/city -I/home/pdelepine/projet/citytest/city/parser -I/home/pdelepine/projet/citytest/city/expressions 
+CXX_INCLUDES = -I/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build -I/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city -I/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser -I/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/expressions 
 
