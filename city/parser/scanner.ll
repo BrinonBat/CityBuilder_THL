@@ -2,6 +2,7 @@
 
 #include "scanner.hh"
 #include <cstdlib>
+#include <iostream>
 
 #define YY_NO_UNISTD_H
 
@@ -25,14 +26,6 @@ using token = yy::Parser::token;
 %}
 fin return token::END;
 
-
-(%%.*)$      { // commentaire ligne
-        return token::com;
-}
-(%\/(.|\n)*\/%)   { // bloc de commentaire
-    return token::com;
-}
-
 "Construire" return token::build;
 "Maison" return token::maison;
 "Route" return token::route;
@@ -54,14 +47,16 @@ fin return token::END;
     yylval->build<int>(std::atoi(YYText()));
     return token::NUMBER;
 }
-
+(%%.*)$      {
+        return token::com;
+}
+(%\/(.|\n)*\/%)   {
+    return token::com;
+}
 
 "\n"          {
     loc->lines();
     return token::NL;
 }
 
-^[ \t] {
-
-}
 %%

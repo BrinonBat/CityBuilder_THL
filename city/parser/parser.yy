@@ -14,9 +14,11 @@
     #include "expressionUnaire.hh"
     #include "constante.hh"
     #include "variable.hh"
+    #include "graphe.hh"
 
     class Scanner;
     class Driver;
+    class Graphe;
 }
 
 %parse-param { Scanner &scanner }
@@ -25,7 +27,7 @@
 %code{
     #include <iostream>
     #include <string>
-
+    
     #include "scanner.hh"
     #include "driver.hh"
 
@@ -35,19 +37,16 @@
 
 %token                  NL
 %token                  END
-%token <unsigned int>            NUMBER
+%token <int>            NUMBER
 %token                  build
 %token                  maison
 %token                  route
 %token                  arrow
-
-
-%token     com
-
-
+%token                  comcourt
+%token                  com
 
 %type <int>             operation
-%type<std::string>      traitement traitements
+%type<std::string>      traitement traitements 
 %left '-' '+'
 %left '*' '/'
 %precedence  NEG
@@ -55,11 +54,12 @@
 %%
 
 programme:
-    instruction {
+    instruction{
+        YYACCEPT;
     }
 
 instruction:
-    operation{
+    operation  {
         std::cout << "#-> " << $1 << std::endl;
     }
     | build '{' NL traitements '}'{
@@ -67,18 +67,26 @@ instruction:
         std::cout<<"Construire {"<<std::endl;
         std::cout<<$4<<std::endl;
         std::cout<<"}"<<std::endl;
+        /*Graphe g;
+        g.initMatrice(5);*/
     }
-    | build '(' NUMBER ')' '{' NL traitements '}'{
+    | build '(' NUMBER ')' '{' NL traitements '}' {
         // creation graphe de taille resultat operation
         // si graphe existe deja change juste la taille graphe
         std::cout<<"Construire ("<<$3<<"){ test"<<std::endl;
         std::cout<<$7<<std::endl;
         std::cout<<"}"<<std::endl;
+       /* Graphe g;
+        g.initMatrice($3);*/
     }
+
 traitements:
     traitement NL traitements{
+
     }
-    |traitement NL {
+    |
+    traitement NL {
+
     }
 
 traitement:
@@ -86,24 +94,23 @@ traitement:
             //construire maison à un emplacement aléatoire
                 std::cout<<"Maison ok"<<std::endl;
         }
-        | maison coordonnee {
+        | maison  coordonnee {
             // construire maison selon coordonées
                 std::cout<<"Maison cok"<<std::endl;
         }
         | route coordonnee arrow coordonnee  {
             std::cout<<"Route "<<"->"<<std::endl;
-
-        | com  {
-                std::cout<<"Commentaire  "<<std::endl;
+        }
+        | com {
+            std::cout<<"Commentaire"<<std::endl;
         }
 
-		}
+
 
 coordonnee:
         '(' operation ',' operation ',' operation ')' {
             std::cout<<" coordonnee ";
-        }
-
+                }
 
 operation:
     NUMBER {
