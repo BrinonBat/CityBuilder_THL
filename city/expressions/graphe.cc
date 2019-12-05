@@ -3,7 +3,7 @@
 #include <iostream>
 #include <queue>
 
-Graphe::Graphe(): rayon(0), oriente(false){
+Graphe::Graphe(): nbSommet(0), oriente(false){
 }
 
 Graphe::~Graphe(){
@@ -11,9 +11,9 @@ Graphe::~Graphe(){
 }
 
 void Graphe::initMatrice(int nbS){
-  rayon = nbS;
-  for (int i=0; i<rayon; ++i){
-    for (int j=0; j<rayon; ++j){
+  nbSommet = nbS;
+  for (int i=0; i<nbSommet; ++i){
+    for (int j=0; j<nbSommet; ++j){
       matrice[i][j]=0;
     }
   }
@@ -27,9 +27,9 @@ void Graphe::ajoutArc(int origine,int destination, int c){
 
 void Graphe::affichageMatrice(){
   std::vector<int> largeurColonne;
-  for (int i=0; i<rayon; ++i){    
+  for (int i=0; i<nbSommet; ++i){    
     int max=0;
-    for (int j=0; j<rayon; ++j){
+    for (int j=0; j<nbSommet; ++j){
       std::ostringstream tmp;
       tmp << matrice[j][i];
       if (tmp.tellp() > max) {max=tmp.tellp();}   
@@ -37,16 +37,14 @@ void Graphe::affichageMatrice(){
     largeurColonne.push_back(max);
   }
   std::cout << "    ";
-  for (int i=0; i<rayon; ++i)
-    printf("%*d  ",largeurColonne[i],i-rayon);
+  for (int i=0; i<nbSommet; ++i)
+    printf("%*d  ",largeurColonne[i],i+1);
   std::cout << std::endl; 
-  for (int i=0; i<rayon; ++i){
-    printf("%3d|",i-rayon);
-    for (int j=0; j<rayon; ++j){
-      if(j-rayon>=0 && (j-rayon)<10){
+  for (int i=0; i<nbSommet; ++i){
+    printf("%3d|",i+1);
+    for (int j=0; j<nbSommet; ++j){
+      if(j>=0 && (j)<10){
       printf("%*.*d  ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
-    }else if((j-rayon)<-9){
-      printf("%*.*d    ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
     }else{
       printf("%*.*d   ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
     }
@@ -59,7 +57,7 @@ void Graphe::affichageMatrice(){
 void Graphe::explorer(int s){
   parcourus[s]=true;
   std::cout << "S" << s+1 << " ";
-  for (int i=0;i<rayon;++i) {
+  for (int i=0;i<nbSommet;++i) {
     if (!parcourus[i] and (matrice[s][i]!=0))
       explorer(i);
   }   

@@ -14,15 +14,15 @@ class Graphe{
   private : 
     std::array<std::array<int,Max>, Max> matrice;
     std::array<bool,Max> parcourus;
-    int rayon;
+    int nbSommet;
     bool oriente;
     
   public :
 
     Graphe();
     ~Graphe();
-    void initMatrice(int rayon);
-    int getRayon(int i) {return rayon;}
+    void initMatrice(int nbSommet);
+    int getnbSommet(int i) {return nbSommet;}
     void setOriente(bool o) {oriente = o;};
     void ajoutArc(int,int,int); 
     void affichageMatrice(); 
