@@ -43,7 +43,7 @@ void Graphe::affichageMatrice(){
   for (int i=0; i<nbSommet; ++i){
     printf("%3d|",i+1);
     for (int j=0; j<nbSommet; ++j){
-      if(j>=0 && (j)<10){
+      if(j>=0 && (j)<9){
       printf("%*.*d  ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
     }else{
       printf("%*.*d   ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
