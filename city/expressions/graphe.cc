@@ -5,7 +5,8 @@
 
 Graphe::Graphe(): nbSommet(0), oriente(false){
 }
-
+Graphe::Graphe(int r): nbSommet(0),rayon(r), oriente(false){
+}
 Graphe::~Graphe(){
 
 }

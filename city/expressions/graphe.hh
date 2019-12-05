@@ -15,12 +15,14 @@ class Graphe{
     std::array<std::array<int,Max>, Max> matrice;
     std::array<bool,Max> parcourus;
     int nbSommet;
+    int rayon;
     bool oriente;
     std::vector<Maison> _sommets;
     
   public :
 
     Graphe();
+    Graphe(int r);
     ~Graphe();
     void initMatrice();
     int getnbSommet(int i) {return nbSommet;}

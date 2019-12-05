@@ -67,8 +67,8 @@ instruction:
         std::cout<<"Construire {"<<std::endl;
         std::cout<<$4<<std::endl;
         std::cout<<"}"<<std::endl;
-        /*Graphe g;
-        g.initMatrice(5);*/
+        Graphe g;
+        
     }
     | build '(' NUMBER ')' '{' NL traitements '}' {
         // creation graphe de taille resultat operation
@@ -76,8 +76,8 @@ instruction:
         std::cout<<"Construire ("<<$3<<"){ test"<<std::endl;
         std::cout<<$7<<std::endl;
         std::cout<<"}"<<std::endl;
-       /* Graphe g;
-        g.initMatrice($3);*/
+        Graphe g;
+        
     }
 
 traitements:
