@@ -41,7 +41,9 @@
 %token                  route
 %token                  arrow
 
+
 %token     com
+
 
 
 %type <int>             operation
@@ -54,7 +56,6 @@
 
 programme:
     instruction {
-        YYACCEPT;
     }
 
 instruction:
@@ -76,10 +77,8 @@ instruction:
     }
 traitements:
     traitement NL traitements{
-
     }
     |traitement NL {
-
     }
 
 traitement:
@@ -87,25 +86,23 @@ traitement:
             //construire maison à un emplacement aléatoire
                 std::cout<<"Maison ok"<<std::endl;
         }
-        | maison  coordonnee {
+        | maison coordonnee {
             // construire maison selon coordonées
                 std::cout<<"Maison cok"<<std::endl;
         }
         | route coordonnee arrow coordonnee  {
             std::cout<<"Route "<<"->"<<std::endl;
-        }
-        | debcomlong NL commentairelg fincomlong  {
-             std::cout<<"Commentaire long "<<std::endl;
-        }
+
         | com  {
                 std::cout<<"Commentaire  "<<std::endl;
         }
 
+		}
 
 coordonnee:
         '(' operation ',' operation ',' operation ')' {
             std::cout<<" coordonnee ";
-                }
+        }
 
 
 operation:

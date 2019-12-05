@@ -35,15 +35,9 @@
 
 %token                  NL
 %token                  END
-%token <unsigned int>            NUMBER
+%token <int>            NUMBER
 %token                  build
 %token                  maison
-%token                  route
-%token                  arrow
-%token                  debcomlong fincomlong
-%token                  comcourt
-%token<std::string>     com
-
 
 %type <int>             operation
 %type<std::string>      traitement traitements
@@ -55,7 +49,6 @@
 
 programme:
     instruction {
-        YYACCEPT;
     }
 
 instruction:
@@ -77,10 +70,8 @@ instruction:
     }
 traitements:
     traitement NL traitements{
-
     }
     |traitement NL {
-
     }
 
 traitement:
@@ -88,61 +79,15 @@ traitement:
             //construire maison à un emplacement aléatoire
                 std::cout<<"Maison ok"<<std::endl;
         }
-        | maison  coordonnee {
+        | maison coordonnee {
             // construire maison selon coordonées
                 std::cout<<"Maison cok"<<std::endl;
         }
-        | route coordonnee arrow coordonnee  {
-            std::cout<<"Route "<<"->"<<std::endl;
-        }
-        | debcomlong NL commentairelg fincomlong  {
-             std::cout<<"Commentaire long "<<std::endl;
-        }
-        | comcourt commentairect  {
-                std::cout<<"Commentaire ligne "<<std::endl;
-        }
 
-commentairect:
-         com {
-         }
-         | com commentairect {
-         }
-         | '(' commentairect {
-         }
-         |',' commentairect{
-         }
-         |')' commentairect{
-         }
-         | NUMBER commentairect{
-         }
-         | '('  {
-         }
-         |',' {
-         }
-         |')' {
-         }
-         | NUMBER {
-         }
-         |'\'' commentairect{}
-         | '\''
-         | '-' {}
-         | '-' commentairect{}
-         | build{}
-         |build commentairect{}
-         |END commentairect{}
-         |END {}
-
-commentairelg:
-         commentairect NL commentairelg {
-
-         }
-         | commentairect NL{
-
-         }
 coordonnee:
         '(' operation ',' operation ',' operation ')' {
             std::cout<<" coordonnee ";
-                }
+        }
 
 
 operation:

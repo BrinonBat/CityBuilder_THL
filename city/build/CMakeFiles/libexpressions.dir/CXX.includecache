@@ -6,53 +6,53 @@
 
 #IncludeRegexTransform: 
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/constante.cc
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/constante.cc
 constante.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/constante.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/constante.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/constante.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/constante.hh
 expression.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/contexte.cc
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/contexte.cc
 contexte.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/contexte.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/contexte.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/contexte.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/contexte.hh
 string
 -
 map
 -
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
 memory
 -
 contexte.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/contexte.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/contexte.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expressionBinaire.cc
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expressionBinaire.cc
 expressionBinaire.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expressionBinaire.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expressionBinaire.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expressionBinaire.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expressionBinaire.hh
 expression.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expressionUnaire.cc
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expressionUnaire.cc
 expressionUnaire.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expressionUnaire.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expressionUnaire.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expressionUnaire.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expressionUnaire.hh
 expression.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/variable.cc
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/variable.cc
 variable.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/variable.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/variable.hh
 
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/variable.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/variable.hh
 string
 -
 expression.hh
-/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/expressions/expression.hh
 

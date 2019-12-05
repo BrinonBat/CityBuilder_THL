@@ -24,19 +24,8 @@ using token = yy::Parser::token;
     yylval = lval;
 %}
 fin return token::END;
-
-
-(%%.*)$      { // commentaire ligne
-        return token::com;
-}
-(%\/(.|\n)*\/%)   { // bloc de commentaire
-    return token::com;
-}
-
 "Construire" return token::build;
 "Maison" return token::maison;
-"Route" return token::route;
-"->" return token::arrow;
 
 "+" return '+';
 "*" return '*';
@@ -54,7 +43,6 @@ fin return token::END;
     yylval->build<int>(std::atoi(YYText()));
     return token::NUMBER;
 }
-
 
 "\n"          {
     loc->lines();

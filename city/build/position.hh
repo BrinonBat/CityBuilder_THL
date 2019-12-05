@@ -31,12 +31,12 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/position.hh
+ ** \file /home/baptiste/Documents/projects/CityBuilder_THL/city/build/position.hh
  ** Define the yy::position class.
  */
 
-#ifndef YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_POSITION_HH_INCLUDED
-# define YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_POSITION_HH_INCLUDED
+#ifndef YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_POSITION_HH_INCLUDED
+# define YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_POSITION_HH_INCLUDED
 
 # include <algorithm> // std::max
 # include <iostream>
@@ -52,7 +52,7 @@
 
 
 namespace yy {
-#line 56 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/position.hh" // location.cc:296
+#line 56 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/position.hh" // location.cc:296
   /// Abstract a position.
   class position
   {
@@ -176,5 +176,5 @@ namespace yy {
 
 
 } // yy
-#line 180 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/position.hh" // location.cc:296
-#endif // !YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_POSITION_HH_INCLUDED
+#line 180 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/position.hh" // location.cc:296
+#endif // !YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_POSITION_HH_INCLUDED

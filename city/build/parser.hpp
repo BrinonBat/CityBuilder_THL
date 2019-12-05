@@ -31,16 +31,16 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp
+ ** \file /home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp
  ** Define the yy::parser class.
  */
 
 // C++ LALR(1) parser skeleton written by Akim Demaille.
 
-#ifndef YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
 // //                    "%code requires" blocks.
-#line 11 "parser/parser.yy" // lalr1.cc:377
+#line 11 "parser/parser_backup.yy" // lalr1.cc:377
 
     #include "contexte.hh"
     #include "expressionBinaire.hh"
@@ -51,7 +51,7 @@
     class Scanner;
     class Driver;
 
-#line 55 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 55 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -128,7 +128,7 @@
 
 
 namespace yy {
-#line 132 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 132 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
 
 
 
@@ -295,15 +295,13 @@ namespace yy {
     /// An auxiliary type to compute the largest semantic type.
     union union_type
     {
+      // NUMBER
       // operation
       char dummy1[sizeof(int)];
 
       // traitements
       // traitement
       char dummy2[sizeof(std::string)];
-
-      // NUMBER
-      char dummy3[sizeof(unsigned int)];
 };
 
     /// Symbol semantic values.
@@ -331,9 +329,7 @@ namespace yy {
         NUMBER = 260,
         build = 261,
         maison = 262,
-        route = 263,
-        arrow = 264,
-        NEG = 265
+        NEG = 263
       };
     };
 
@@ -374,8 +370,6 @@ namespace yy {
   basic_symbol (typename Base::kind_type t, const int v, const location_type& l);
 
   basic_symbol (typename Base::kind_type t, const std::string v, const location_type& l);
-
-  basic_symbol (typename Base::kind_type t, const unsigned int v, const location_type& l);
 
 
       /// Constructor for symbols with semantic value.
@@ -454,7 +448,7 @@ namespace yy {
 
     static inline
     symbol_type
-    make_NUMBER (const unsigned int& v, const location_type& l);
+    make_NUMBER (const int& v, const location_type& l);
 
     static inline
     symbol_type
@@ -463,14 +457,6 @@ namespace yy {
     static inline
     symbol_type
     make_maison (const location_type& l);
-
-    static inline
-    symbol_type
-    make_route (const location_type& l);
-
-    static inline
-    symbol_type
-    make_arrow (const location_type& l);
 
     static inline
     symbol_type
@@ -678,12 +664,12 @@ namespace yy {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 60,     ///< Last index in yytable_.
+      yylast_ = 56,     ///< Last index in yytable_.
       yynnts_ = 7,  ///< Number of nonterminal symbols.
       yyfinal_ = 12, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
-      yyntokens_ = 20  ///< Number of tokens.
+      yyntokens_ = 18  ///< Number of tokens.
     };
 
 
@@ -695,9 +681,9 @@ namespace yy {
 
 
 } // yy
-#line 699 "/home/baptiste/Bureau/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 685 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
 
 
 
 
-#endif // !YY_YY_HOME_BAPTISTE_BUREAU_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+#endif // !YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
