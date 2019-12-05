@@ -31,27 +31,29 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp
+ ** \file /home/pdelepine/projet/citytest/city/build/parser.hpp
  ** Define the yy::parser class.
  */
 
 // C++ LALR(1) parser skeleton written by Akim Demaille.
 
-#ifndef YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
-# define YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+#ifndef YY_YY_HOME_PDELEPINE_PROJET_CITYTEST_CITY_BUILD_PARSER_HPP_INCLUDED
+# define YY_YY_HOME_PDELEPINE_PROJET_CITYTEST_CITY_BUILD_PARSER_HPP_INCLUDED
 // //                    "%code requires" blocks.
-#line 11 "parser/parser_backup.yy" // lalr1.cc:377
+#line 11 "parser/parser.yy" // lalr1.cc:377
 
     #include "contexte.hh"
     #include "expressionBinaire.hh"
     #include "expressionUnaire.hh"
     #include "constante.hh"
     #include "variable.hh"
+    #include "graphe.hh"
 
     class Scanner;
     class Driver;
+    class Graphe;
 
-#line 55 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 57 "/home/pdelepine/projet/citytest/city/build/parser.hpp" // lalr1.cc:377
 
 # include <cassert>
 # include <cstdlib> // std::abort
@@ -128,7 +130,7 @@
 
 
 namespace yy {
-#line 132 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 134 "/home/pdelepine/projet/citytest/city/build/parser.hpp" // lalr1.cc:377
 
 
 
@@ -329,7 +331,11 @@ namespace yy {
         NUMBER = 260,
         build = 261,
         maison = 262,
-        NEG = 263
+        route = 263,
+        arrow = 264,
+        comcourt = 265,
+        com = 266,
+        NEG = 267
       };
     };
 
@@ -460,6 +466,22 @@ namespace yy {
 
     static inline
     symbol_type
+    make_route (const location_type& l);
+
+    static inline
+    symbol_type
+    make_arrow (const location_type& l);
+
+    static inline
+    symbol_type
+    make_comcourt (const location_type& l);
+
+    static inline
+    symbol_type
+    make_com (const location_type& l);
+
+    static inline
+    symbol_type
     make_NEG (const location_type& l);
 
 
@@ -547,7 +569,7 @@ namespace yy {
   // number is the opposite.  If YYTABLE_NINF, syntax error.
   static const unsigned char yytable_[];
 
-  static const unsigned char yycheck_[];
+  static const signed char yycheck_[];
 
   // YYSTOS[STATE-NUM] -- The (internal number of the) accessing
   // symbol of state STATE-NUM.
@@ -664,12 +686,12 @@ namespace yy {
     enum
     {
       yyeof_ = 0,
-      yylast_ = 56,     ///< Last index in yytable_.
+      yylast_ = 62,     ///< Last index in yytable_.
       yynnts_ = 7,  ///< Number of nonterminal symbols.
       yyfinal_ = 12, ///< Termination state number.
       yyterror_ = 1,
       yyerrcode_ = 256,
-      yyntokens_ = 18  ///< Number of tokens.
+      yyntokens_ = 22  ///< Number of tokens.
     };
 
 
@@ -681,9 +703,9 @@ namespace yy {
 
 
 } // yy
-#line 685 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp" // lalr1.cc:377
+#line 707 "/home/pdelepine/projet/citytest/city/build/parser.hpp" // lalr1.cc:377
 
 
 
 
-#endif // !YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_PARSER_HPP_INCLUDED
+#endif // !YY_YY_HOME_PDELEPINE_PROJET_CITYTEST_CITY_BUILD_PARSER_HPP_INCLUDED
