@@ -7,7 +7,6 @@ Graphe::Graphe(): nbSommet(0), oriente(false){
 }
 
 Graphe::~Graphe(){
-
 }
 
 void Graphe::initMatrice(int nbS){
@@ -28,7 +27,7 @@ void Graphe::ajoutArc(int origine,int destination, int c){
 void Graphe::affichageMatrice(){
   std::vector<int> largeurColonne;
 
-  for (int i=0; i<nbSommet; ++i){    
+  for (int i=0; i<nbSommet; ++i){
 
     int max=0;
     for (int j=0; j<nbSommet; ++j){
@@ -42,12 +41,11 @@ void Graphe::affichageMatrice(){
 
   for (int i=0; i<nbSommet; ++i)
     printf("%*d  ",largeurColonne[i],i+1);
-  std::cout << std::endl; 
+  std::cout << std::endl;
   for (int i=0; i<nbSommet; ++i){
     printf("%3d|",i+1);
     for (int j=0; j<nbSommet; ++j){
       if(j>=0 && (j)<10){
-
       printf("%*.*d  ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
     }else{
       printf("%*.*d   ",largeurColonne[j],largeurColonne[j],matrice[i][j]);
