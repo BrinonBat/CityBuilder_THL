@@ -16,6 +16,7 @@ class Graphe{
     std::array<bool,Max> parcourus;
     int nbSommet;
     bool oriente;
+    std::vector<Maison> _sommets;
     
   public :
 
@@ -24,6 +25,7 @@ class Graphe{
     void initMatrice(int nbSommet);
     int getnbSommet(int i) {return nbSommet;}
     void setOriente(bool o) {oriente = o;};
+    void ajoutSommet(Maison const &m);
     void ajoutArc(int,int,int); 
     void affichageMatrice(); 
     void parcoursProfondeur();

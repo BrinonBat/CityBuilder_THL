@@ -25,6 +25,10 @@ void Graphe::ajoutArc(int origine,int destination, int c){
   matrice[origine-1][destination-1] = c;
 }
 
+void Graphe::ajoutSommet(Maison const & m){
+  _sommets.push_back(m);
+  nbSommet++;
+}
 void Graphe::affichageMatrice(){
   std::vector<int> largeurColonne;
   for (int i=0; i<nbSommet; ++i){    
