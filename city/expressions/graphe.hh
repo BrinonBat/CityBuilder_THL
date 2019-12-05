@@ -22,7 +22,7 @@ class Graphe{
 
     Graphe();
     ~Graphe();
-    void initMatrice(int nbSommet);
+    void initMatrice();
     int getnbSommet(int i) {return nbSommet;}
     void setOriente(bool o) {oriente = o;};
     void ajoutSommet(Maison const &m);

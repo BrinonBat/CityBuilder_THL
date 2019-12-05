@@ -10,11 +10,12 @@ Graphe::~Graphe(){
 
 }
 
-void Graphe::initMatrice(int nbS){
-  nbSommet = nbS;
+void Graphe::initMatrice(){
   for (int i=0; i<nbSommet; ++i){
     for (int j=0; j<nbSommet; ++j){
-      matrice[i][j]=0;
+      if(matrice[i][j]!=1){
+        matrice[i][j]=0;
+      }
     }
   }
   std::cout << "Graphe initialisé " <<std::endl;

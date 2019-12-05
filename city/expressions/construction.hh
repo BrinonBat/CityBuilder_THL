@@ -8,4 +8,6 @@ class Maison{
 private:
     coordonnee _coord;
     std::vector<coordonnee> _arcs;
+public:
+    Maison(coordonnee c):_coord(c){}
 };

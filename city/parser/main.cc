@@ -16,7 +16,12 @@ int main( int  argc, char* argv[]) {
     yy::Parser parser(scanner, driver);
 
     Graphe g;
-    g.initMatrice(11);
+    g.initMatrice();
+    g.affichageMatrice();
+    coordonnee coo;
+    coo._x=0;coo._y=0;coo._z=0;
+    g.ajoutSommet(Maison(coo));
+    g.initMatrice();
     g.affichageMatrice();
 
     parser.parse();
