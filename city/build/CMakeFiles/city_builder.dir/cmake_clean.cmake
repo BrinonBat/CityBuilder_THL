@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "parser.cpp"
   "parser.hpp"
   "parser.output"
-  "automate.txt"
-  "automate.txt"
   "scanner.cpp"
   "CMakeFiles/city_builder.dir/parser/main.cc.o"
   "CMakeFiles/city_builder.dir/parser/driver.cc.o"

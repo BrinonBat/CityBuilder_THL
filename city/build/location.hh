@@ -31,18 +31,18 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/location.hh
+ ** \file /home/baptiste/Documents/projects/CityBuilder_THL/city/build/location.hh
  ** Define the yy::location class.
  */
 
-#ifndef YY_YY_HOME_PDELEPINE_PROJET_CITYBUILDER_CITYBUILDER_THL_CITY_BUILD_LOCATION_HH_INCLUDED
-# define YY_YY_HOME_PDELEPINE_PROJET_CITYBUILDER_CITYBUILDER_THL_CITY_BUILD_LOCATION_HH_INCLUDED
+#ifndef YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_LOCATION_HH_INCLUDED
+# define YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_LOCATION_HH_INCLUDED
 
 # include "position.hh"
 
 
 namespace yy {
-#line 46 "/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/location.hh" // location.cc:296
+#line 46 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/location.hh" // location.cc:296
   /// Abstract a location.
   class location
   {
@@ -188,5 +188,5 @@ namespace yy {
 
 
 } // yy
-#line 192 "/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/location.hh" // location.cc:296
-#endif // !YY_YY_HOME_PDELEPINE_PROJET_CITYBUILDER_CITYBUILDER_THL_CITY_BUILD_LOCATION_HH_INCLUDED
+#line 192 "/home/baptiste/Documents/projects/CityBuilder_THL/city/build/location.hh" // location.cc:296
+#endif // !YY_YY_HOME_BAPTISTE_DOCUMENTS_PROJECTS_CITYBUILDER_THL_CITY_BUILD_LOCATION_HH_INCLUDED

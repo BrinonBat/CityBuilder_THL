@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -74,37 +74,37 @@ parser.hpp
 location.hh
 ../parser/location.hh
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/location.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/location.hh
 position.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/position.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/position.hh
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/parser.cpp
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.cpp
 parser.hpp
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/parser.hpp
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp
 iostream
 -
 string
 -
 scanner.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/scanner.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/scanner.hh
 driver.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/driver.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/driver.hh
 libintl.h
 -
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/parser.hpp
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/parser.hpp
 contexte.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/contexte.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/contexte.hh
 expressionBinaire.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/expressionBinaire.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/expressionBinaire.hh
 expressionUnaire.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/expressionUnaire.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/expressionUnaire.hh
 constante.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/constante.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/constante.hh
 variable.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/variable.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/variable.hh
 graphe.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/graphe.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/graphe.hh
 cassert
 -
 cstdlib
@@ -118,15 +118,15 @@ string
 vector
 -
 stack.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/stack.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/stack.hh
 location.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/location.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/location.hh
 typeinfo
 -
 cassert
 -
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/position.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/position.hh
 algorithm
 -
 iostream
@@ -134,7 +134,7 @@ iostream
 string
 -
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/scanner.cpp
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/scanner.cpp
 inttypes.h
 -
 iostream
@@ -150,7 +150,7 @@ cstring
 FlexLexer.h
 -
 scanner.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/scanner.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/scanner.hh
 cstdlib
 -
 iostream
@@ -158,31 +158,31 @@ iostream
 unistd.h
 -
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/build/stack.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/build/stack.hh
 vector
 -
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/driver.cc
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/driver.cc
 driver.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/driver.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/driver.hh
 iostream
 -
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/driver.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/driver.hh
 string
 -
 contexte.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/contexte.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/contexte.hh
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/main.cc
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/main.cc
 parser.hpp
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/parser.hpp
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/parser.hpp
 scanner.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/scanner.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/scanner.hh
 driver.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/driver.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/driver.hh
 graphe.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/graphe.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/graphe.hh
 iostream
 -
 fstream
@@ -190,13 +190,13 @@ fstream
 cstring
 -
 
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/scanner.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/scanner.hh
 FlexLexer.h
 -
 parser.hpp
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/parser.hpp
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/parser.hpp
 location.hh
-/home/pdelepine/projet/Citybuilder/CityBuilder_THL/city/parser/location.hh
+/home/baptiste/Documents/projects/CityBuilder_THL/city/parser/location.hh
 
 location.hh
 position.hh
