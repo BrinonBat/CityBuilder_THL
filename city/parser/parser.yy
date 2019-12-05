@@ -40,7 +40,10 @@
 %token                  maison
 %token                  route
 %token                  arrow
-%token<std::string>     com
+
+
+%token     com
+
 
 
 %type <int>             operation
@@ -89,6 +92,11 @@ traitement:
         }
         | route coordonnee arrow coordonnee  {
             std::cout<<"Route "<<"->"<<std::endl;
+
+        | com  {
+                std::cout<<"Commentaire  "<<std::endl;
+        }
+
 		}
 
 coordonnee:
