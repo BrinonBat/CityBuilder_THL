@@ -30,7 +30,7 @@ fin return token::END;
         return token::com;
 }
 (%\/(.|\n)*\/%)   { // bloc de commentaire
-    return token::com;
+    	return token::com;
 }
 
 "Construire" return token::build;

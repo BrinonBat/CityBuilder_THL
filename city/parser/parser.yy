@@ -35,17 +35,12 @@
 
 %token                  NL
 %token                  END
-%token <unsigned int>            NUMBER
+%token <int>            NUMBER
 %token                  build
 %token                  maison
 %token                  route
 %token                  arrow
-
-
-%token     com
-
-
-
+%token				    com
 %type <int>             operation
 %type<std::string>      traitement traitements
 %left '-' '+'
@@ -87,7 +82,7 @@ traitement:
                 std::cout<<"Maison ok"<<std::endl;
         }
         | maison coordonnee {
-            // construire maison selon coordonées
+            // construire maison selon coordonnées
                 std::cout<<"Maison cok"<<std::endl;
         }
         | route coordonnee arrow coordonnee  {
@@ -97,7 +92,6 @@ traitement:
                 std::cout<<"Commentaire  "<<std::endl;
         }
 
-		}
 
 coordonnee:
         '(' operation ',' operation ',' operation ')' {

@@ -11,15 +11,12 @@
 
 int main( int  argc, char* argv[]) {
     Driver driver;
-    std::ifstream fichier("../exemples/011.txt");
+    std::ifstream fichier("../exemples/01.city");
     std::string ligne;
 
     Scanner scanner(fichier, std::cout);
     yy::Parser parser(scanner, driver);
 
-    parser.parse();/*
-    while(getline(fichier,ligne)){
-        std::cout<<ligne<<std::endl;
-    }*/
+    parser.parse();
     return 0;
 }
