@@ -11,7 +11,7 @@
 
 int main( int  argc, char* argv[]) {
     Driver driver;
-    std::ifstream fichier("011.txt");
+    std::ifstream fichier("../exemples/011.txt");
     std::string ligne;
 
     Scanner scanner(fichier, std::cout);
